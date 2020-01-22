@@ -7,12 +7,12 @@ class Random:
         self.num = random.randrange(10) # Or randint(0, 10)
 
     def go(self):
-        # print("Guess any number between 0 and 10.")
-
         if self.guess == self.num:
             print(f"You guessed right. The correct number is {self.num}")
-        else:
-            print(f"Ooops! Please try again. The correct number was {self.num}")
+        elif self.guess > self.num:
+            print(f"Ooops! Please try again. The number was too high")
+        elif self.guess < self.num:
+            print(f"Ooops! Please try again. The number was too low")
 
 
 if __name__ == '__main__':
